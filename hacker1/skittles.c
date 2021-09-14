@@ -5,7 +5,12 @@
 
 int main(void)
 {
-    //int randon = srand(time(NULL));
-    //int skittles = rand() % 1024;
-    printf("asad");
+    srand(time(NULL));
+    int skittles = rand() % 1024;
+    printf("%d\n", skittles);
+
+    printf("Digite um número: ");
+    int n = GetInt();
+    printf("%d", n);
+    return 0;
 }
