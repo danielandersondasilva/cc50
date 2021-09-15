@@ -7,10 +7,27 @@ int main(void)
 {
     srand(time(NULL));
     int skittles = rand() % 1024;
-    printf("%d\n", skittles);
+    printf("Olá! Eu sou uma máquina de balas falante! Adivinhe quantas balas têm dentro de mim. Dita: é algo entre 0 e 1023.\n");
+    int chute;
+    chute = 1025;
+    while (skittles != chute)
+    {
+        printf("Digite um número: ");
+        chute = GetInt();
+        if (chute > skittles)
+        {
+            printf("Tente um número menor\n");
+        }
+        else if (chute < skittles)
+        {
+            printf("Haha! Tenho mais balas que isso!\n");
+        }
+        else
+        {
+            printf("Parabéns vc acertou!\n");
+            break;
+        }
+    }
 
-    printf("Digite um número: ");
-    int n = GetInt();
-    printf("%d", n);
     return 0;
 }
